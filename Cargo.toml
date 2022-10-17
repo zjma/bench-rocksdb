@@ -1,0 +1,16 @@
+[package]
+name = "bench-rocksdb"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+criterion = "0.4.0"
+rand = "0.8.5"
+rocksdb = "0.19.0"
+
+[profile.release]
+debug = true    # for cargo flamegraph to be able to profile in release mode
+
+[[bench]]
+name = "rocksdb"
+harness = false
