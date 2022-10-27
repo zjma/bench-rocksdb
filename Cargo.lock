@@ -30,6 +30,7 @@ name = "bench-rocksdb"
 version = "0.1.0"
 dependencies = [
  "criterion",
+ "log",
  "rand",
  "rocksdb",
 ]

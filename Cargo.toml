@@ -5,6 +5,7 @@ edition = "2021"
 
 [dependencies]
 criterion = "0.4.0"
+log = "0.4.17"
 rand = "0.8.5"
 rocksdb = "0.19.0"
 
@@ -12,5 +13,9 @@ rocksdb = "0.19.0"
 debug = true    # for cargo flamegraph to be able to profile in release mode
 
 [[bench]]
-name = "rocksdb"
+name = "batch_write"
+harness = false
+
+[[bench]]
+name = "seek"
 harness = false
